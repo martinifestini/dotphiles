@@ -24,8 +24,8 @@ dotsyncrc
 #ctags/ctags
 #cmus
 #curl/curlrc
-git/gitconfig
-git/gitignore
+#git/gitconfig
+#git/gitignore
 #git/gitattributes
 #git/tigrc
 #git/gitk
@@ -37,8 +37,8 @@ git/gitignore
 #mpd/mpd.conf
 #mercurial/hgrc
 #mercurial/hgignore
-mutt
-mutt/muttrc
+#mutt
+#mutt/muttrc
 #mutt/offlineimaprc
 #mysql/my.cnf
 #ncmpcpp/config
@@ -61,7 +61,7 @@ mutt/muttrc
 #subversion
 #task/task
 #task/taskrc
-tmux/tmux.conf
+#tmux/tmux.conf
 #tmux/tmuxinator
 #vim/dotvim:.vim
 vim/vimrc
@@ -73,12 +73,14 @@ vim/vimrc
 #zsh/zlogout
 #zsh/zprofile
 #zsh/zshenv
-zsh/zshrc
+#zsh/zshrc
 [endfiles]
 
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
+tomaat                           git=NONE
+dev                              git=tomaat
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
