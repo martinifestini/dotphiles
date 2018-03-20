@@ -1,17 +1,11 @@
-vim
-===
+# Installation
 
-Adds [dotvim][1] configuration
 
-To use, add the following to **dotsyncrc**
-
-    [files]
-    ..
-    vim/dotvim:.vim
-    vim/vimrc
-    vim/gvimrc
-    ..
-    [endfiles]
-
-[1]: https://github.com/dotphiles/dotvim
-
+```
+:$ git clone git@github.com:martinifestini/vim.git ~/.vim
+:$ cd ~/.vim
+:$ git submodule update --init bundle/Vundle.vim
+:$ vim
+; should load wihtout errors!
+:PluginInstall  # install plugins
+```

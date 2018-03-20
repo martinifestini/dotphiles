@@ -1,28 +1,94 @@
-"
-" dotphiles : https://github.com/dotphiles/dotphiles
-"
-" Setup vim and load required plugins before dotvim
-"
-" Authors:
-"   Ben O'Hara <bohara@gmail.com>
-"
 
-" Call dotvim
-source ~/.vim/dotvim.vim
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
-if has("user_commands")
-  set nocompatible
-  filetype off
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-  "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
-  let g:vundles=['general', 'programming']
-  let g:neocomplcache_enable_at_startup = 1
-  " Load 'vundles'
-  source ~/.vim/vundles.vim
-  " Add extra bundles here...
-  " Bundle 'reponame'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'w0rp/ale'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'seeamkhan/robotframework-vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+" hi ColorColumn guibg=gray ctermbg=gray
+highlight RedundantSpaces term=standout ctermbg=red guibg=red
+match RedundantSpaces /\s\+$\| \+\ze\t/
+
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+filetype plugin indent on    " required
+set wrap
+map <C-n> :NERDTreeToggle<CR>
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,.git/*,WEB-INF/*,**/img/*,.git*,*.egg,*_components/**,*node_modules/**,build/**,env/**
+
+let g:ctrlp_custom_ignore = '\v[\/](WEB-INF|env)$'
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'
+
+" CtrlP mappings
+
+nmap <leader>lw :CtrlP<CR><C-\>w
+
+cmap :tabl tabe<CR>:tabo<CR>
+
+" Font
+
+if has('gui_running')
+    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11
 endif
 
-" Customize to your needs...
+" Clearly this only works with airline enabled with powerline fonts
+let g:airline_powerline_fonts = 1
 
+
+
+"  detect indent!
+" autocmd BufReadPost * :DetectIndent
+" autocmd BufWritePost *.py call Flake8()
+" let g:detectindent_preferred_expandtab = 1
+" let g:syntastic_python_checkers = ['flake8', 'pylint']
+
+au BufNewFile,BufRead *.robot setlocal filetype=robot
+
+set wildmode=list:longest
+set wildignore=*.pyc
+set ts=4
+set sw=4
+set ls=2
+set ai
+set si
+set incsearch
+set expandtab
+set number
+set nowrap
+set ruler
+syntax on
+set colorcolumn=80
+" execute "set colorcolumn=" . join(range(81,335), ',')
+set guioptions=egmt
+set so=5
+set lcs=tab:>-,trail:-
+" maak hier ff GUI only regels van
+" highlight guifg=gray
+syntax on
+filetype plugin indent on
+
+
+set t_Co=256
+colorscheme Benokai
+set gfn=Monospace\ 10
+
+set wrap
+set columns=80
