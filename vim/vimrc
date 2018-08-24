@@ -88,4 +88,3 @@ colorscheme Benokai
 set gfn=Monospace\ 10
 
 set wrap
-set columns=80
