@@ -13,6 +13,8 @@ Plugin 'w0rp/ale'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'seeamkhan/robotframework-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -20,11 +22,6 @@ call vundle#end()            " required
 " hi ColorColumn guibg=gray ctermbg=gray
 highlight RedundantSpaces term=standout ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t/
-
-
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
 
 filetype plugin indent on    " required
 set wrap
