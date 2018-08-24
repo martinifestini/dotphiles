@@ -24,7 +24,7 @@ dotsyncrc
 #ctags/ctags
 #cmus
 #curl/curlrc
-#git/gitconfig
+git/gitconfig
 #git/gitignore
 #git/gitattributes
 #git/tigrc
@@ -81,7 +81,6 @@ vim/
 [hosts]
 tomaat                           git=NONE
 dev                              git=tomaat
-ip-10-100-1-229                  type=NONE
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere

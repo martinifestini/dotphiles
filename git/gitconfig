@@ -9,8 +9,8 @@
 
 # Global Config
 [user]
-    #name = "**Your Name**"
-    #email = "**Your Email**"
+    name = Martijn Meijer
+    email = martijn@bynder.com
     #signingkey = **Your GPG ID**
 
 [branch "master"]
@@ -115,7 +115,7 @@
     hubd = compare
 
     # index
-    s  = status
+    st  = status
     a  = add
     ia = add
     ir = reset
