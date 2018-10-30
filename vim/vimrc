@@ -6,7 +6,6 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'w0rp/ale'
@@ -15,6 +14,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'seeamkhan/robotframework-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'hashivim/vim-terraform'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,9 +83,12 @@ set lcs=tab:>-,trail:-
 syntax on
 filetype plugin indent on
 
-
+" colors and styling
 set t_Co=256
-colorscheme Benokai
-set gfn=Monospace\ 10
+colorscheme gruvbox
+set bg=dark
+set gfn=DejaVu\ Sans\ Mono\ for\ Powerline:h13
+" weird thing with MacOS
+set backspace=2
 
 set wrap
