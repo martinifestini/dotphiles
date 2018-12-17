@@ -116,6 +116,8 @@ source "$DOTZSH/init.zsh"
 
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 
+export AWS_PROFILE=383533892017/DevopsAdmin/martijn@bynder.com
+
 autoload -Uz promptinit
 promptinit
 prompt minimal
